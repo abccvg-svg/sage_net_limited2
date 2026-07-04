@@ -158,13 +158,13 @@
   .btn-outline{border-color:rgba(237,239,231,0.4);color:var(--ink);}
   .btn-outline:hover{border-color:var(--ink);}
 
-  .hero-cone{
+  .hero-illustration{
     position:absolute;right:6%;bottom:0;
     width:min(30vw,380px);
     opacity:0;
     animation:fadeUp 1.1s ease .3s forwards, float 6s ease-in-out 1.4s infinite;
   }
-  .hero-barrier{
+  .hero-illustration-2{
     position:absolute;left:4%;bottom:6%;
     width:min(26vw,320px);
     opacity:0;
@@ -346,7 +346,7 @@
     .product.reverse .p-media, .product.reverse .p-copy{order:initial;}
     .stats{grid-template-columns:1fr 1fr;}
     .client-grid{grid-template-columns:1fr;}
-    .hero-cone,.hero-barrier{display:none;}
+    .hero-illustration,.hero-illustration-2{display:none;}
     .product-grid{grid-template-columns:1fr;}
   }
 </style>
@@ -388,39 +388,66 @@
     <a href="#contact" class="btn btn-outline" data-en="Talk to Sales" data-zh="聯絡我們">Talk to Sales</a>
   </div>
 
-  <!-- Technical illustration: traffic cone -->
-  <svg class="hero-cone" viewBox="0 0 240 340" fill="none">
-    <ellipse cx="120" cy="318" rx="96" ry="14" fill="#1B1F15"/>
-    <rect x="34" y="292" width="172" height="30" rx="4" fill="#E8622C"/>
-    <rect x="34" y="292" width="172" height="30" rx="4" stroke="#F6F5F0" stroke-opacity="0.15"/>
-    <path d="M120 20 L188 280 H52 L120 20Z" fill="#E8622C"/>
-    <path d="M120 20 L188 280 H52 L120 20Z" stroke="#13150F" stroke-opacity="0.25"/>
-    <path d="M92 150 L148 150 L156 190 L84 190 Z" fill="#F6F5F0"/>
-    <path d="M76 210 L164 210 L172 250 L68 250 Z" fill="#F6F5F0"/>
-    <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="3 3" opacity="0.7">
-      <line x1="20" y1="20" x2="20" y2="292"/>
-      <line x1="16" y1="20" x2="24" y2="20"/>
-      <line x1="16" y1="292" x2="24" y2="292"/>
+  <!-- Technical illustration: Property Management Toolbox -->
+  <svg class="hero-illustration" viewBox="0 0 280 340" fill="none">
+    <!-- Toolbox base -->
+    <rect x="40" y="200" width="200" height="100" rx="8" fill="#3A4232" stroke="#8FA07E" stroke-width="1.5"/>
+    <rect x="40" y="200" width="200" height="20" rx="8" fill="#4F5D45"/>
+    <!-- Handle -->
+    <path d="M60 200 Q140 100 220 200" stroke="#8FA07E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Tools inside -->
+    <rect x="55" y="225" width="8" height="65" fill="#E8622C"/>
+    <circle cx="75" cy="230" r="6" fill="#F5C63B"/>
+    <circle cx="95" cy="235" r="5" fill="#E8622C"/>
+    <rect x="110" y="228" width="12" height="10" fill="#8FA07E" rx="2"/>
+    <path d="M135 225 L145 250 L135 250 Z" fill="#F5C63B"/>
+    <rect x="150" y="232" width="14" height="8" fill="#E8622C" rx="2"/>
+    <circle cx="190" cy="238" r="5" fill="#8FA07E"/>
+    <!-- Grid dimension lines -->
+    <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="3 3" opacity="0.6">
+      <line x1="140" y1="320" x2="140" y2="360"/>
+      <line x1="135" y1="355" x2="145" y2="355"/>
+      <line x1="20" y1="170" x2="20" y2="320"/>
+      <line x1="16" y1="170" x2="24" y2="170"/>
+      <line x1="16" y1="320" x2="24" y2="320"/>
     </g>
-    <text x="0" y="160" fill="#8FA07E" font-family="IBM Plex Mono" font-size="11" transform="rotate(-90 20 160)" text-anchor="middle">700MM</text>
+    <text x="140" y="360" fill="#8FA07E" font-family="IBM Plex Mono" font-size="11" text-anchor="middle" dy="4">COMPLETE TOOLKIT</text>
   </svg>
 
-  <!-- Technical illustration: belt barrier -->
-  <svg class="hero-barrier" viewBox="0 0 300 220" fill="none">
-    <rect x="20" y="150" width="44" height="50" rx="4" fill="#1E2217" stroke="#8FA07E" stroke-opacity="0.4"/>
-    <rect x="236" y="150" width="44" height="50" rx="4" fill="#1E2217" stroke="#8FA07E" stroke-opacity="0.4"/>
-    <rect x="30" y="40" width="24" height="120" rx="10" fill="#3A4232"/>
-    <rect x="246" y="40" width="24" height="120" rx="10" fill="#3A4232"/>
-    <circle cx="42" cy="30" r="14" fill="#8FA07E"/>
-    <circle cx="258" cy="30" r="14" fill="#8FA07E"/>
-    <path d="M56 70 Q150 110 244 70" stroke="#E8622C" stroke-width="16" fill="none" stroke-linecap="round"/>
-    <path d="M56 70 Q150 110 244 70" stroke="#13150F" stroke-width="16" fill="none" stroke-opacity="0.15" stroke-dasharray="1 28" stroke-linecap="round"/>
-    <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="3 3" opacity="0.6">
-      <line x1="42" y1="210" x2="258" y2="210"/>
-      <line x1="42" y1="204" x2="42" y2="216"/>
-      <line x1="258" y1="204" x2="258" y2="216"/>
+  <!-- Technical illustration: Building/Property Icon -->
+  <svg class="hero-illustration-2" viewBox="0 0 280 280" fill="none">
+    <!-- Building structure -->
+    <rect x="60" y="80" width="160" height="160" rx="8" fill="#3A4232" stroke="#8FA07E" stroke-width="2"/>
+    <!-- Windows grid -->
+    <g fill="none" stroke="#8FA07E" stroke-width="1.5" opacity="0.8">
+      <rect x="75" y="100" width="20" height="20"/>
+      <rect x="105" y="100" width="20" height="20"/>
+      <rect x="135" y="100" width="20" height="20"/>
+      <rect x="165" y="100" width="20" height="20"/>
+      <rect x="75" y="140" width="20" height="20"/>
+      <rect x="105" y="140" width="20" height="20"/>
+      <rect x="135" y="140" width="20" height="20"/>
+      <rect x="165" y="140" width="20" height="20"/>
+      <rect x="75" y="180" width="20" height="20"/>
+      <rect x="105" y="180" width="20" height="20"/>
+      <rect x="135" y="180" width="20" height="20"/>
+      <rect x="165" y="180" width="20" height="20"/>
     </g>
-    <text x="150" y="218" fill="#8FA07E" font-family="IBM Plex Mono" font-size="10" text-anchor="middle" dy="10">RETRACTABLE 3M</text>
+    <!-- Door -->
+    <rect x="130" y="215" width="20" height="25" fill="#8FA07E" rx="2"/>
+    <circle cx="148" cy="227.5" r="2" fill="#13150F"/>
+    <!-- Roof -->
+    <path d="M60 80 L140 30 L220 80" fill="#E8622C" opacity="0.8"/>
+    <path d="M60 80 L140 30 L220 80" stroke="#8FA07E" stroke-width="1.5" fill="none"/>
+    <!-- Support lines showing stability -->
+    <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.5">
+      <line x1="90" y1="240" x2="90" y2="270"/>
+      <line x1="140" y1="240" x2="140" y2="270"/>
+      <line x1="190" y1="240" x2="190" y2="270"/>
+    </g>
+    <!-- Base/Foundation -->
+    <rect x="50" y="240" width="180" height="8" fill="#4F5D45" rx="2"/>
+    <text x="140" y="260" fill="#8FA07E" font-family="IBM Plex Mono" font-size="10" text-anchor="middle" dy="5">INTEGRATED CARE</text>
   </svg>
 
   <div class="scroll-cue"><span data-en="Scroll" data-zh="向下捲動">Scroll</span><div class="line"></div></div>
@@ -434,30 +461,48 @@
   <!-- Featured Products -->
   <div class="product reveal" style="margin-top:80px;">
     <div class="p-media">
-      <svg viewBox="0 0 240 340" fill="none">
-        <ellipse cx="120" cy="320" rx="104" ry="16" fill="#0F110C"/>
-        <rect x="26" y="290" width="188" height="34" rx="5" fill="#E8622C"/>
-        <path d="M120 12 L194 284 H46 L120 12Z" fill="#E8622C"/>
-        <path d="M96 158 L144 158 L153 200 L87 200 Z" fill="#F6F5F0"/>
-        <path d="M78 222 L162 222 L171 264 L69 264 Z" fill="#F6F5F0"/>
-        <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="4 4" opacity="0.6">
-          <line x1="120" y1="12" x2="120" y2="324"/>
-          <line x1="10" y1="12" x2="120" y2="12"/>
-          <line x1="10" y1="12" x2="10" y2="324"/>
-          <line x1="10" y1="324" x2="120" y2="324"/>
+      <svg viewBox="0 0 240 320" fill="none">
+        <!-- Backdrop symbolizing property management ecosystem -->
+        <circle cx="120" cy="140" r="100" fill="none" stroke="#8FA07E" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+        <!-- Central hub -->
+        <circle cx="120" cy="140" r="30" fill="#8FA07E" opacity="0.2"/>
+        <circle cx="120" cy="140" r="24" fill="none" stroke="#8FA07E" stroke-width="2"/>
+        <!-- Surrounding elements representing different services -->
+        <g>
+          <!-- Safety/Barriers -->
+          <rect x="180" y="60" width="40" height="35" rx="4" fill="#E8622C" opacity="0.8"/>
+          <line x1="120" y1="140" x2="200" y2="77" stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+          <!-- Building/Structure -->
+          <rect x="50" y="40" width="35" height="50" rx="3" fill="#F5C63B" opacity="0.7"/>
+          <line x1="120" y1="140" x2="67" y2="65" stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+          <!-- Tools/Maintenance -->
+          <circle cx="70" cy="180" r="18" fill="none" stroke="#8FA07E" stroke-width="2"/>
+          <line x1="120" y1="140" x2="70" y2="180" stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+          <!-- Cleaning/Operations -->
+          <circle cx="190" cy="190" r="16" fill="none" stroke="#F5C63B" stroke-width="2"/>
+          <line x1="120" y1="140" x2="190" y2="190" stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+          <!-- Safety Signs -->
+          <path d="M120 260 L135 240 L120 230 L105 240 Z" fill="#E8622C"/>
+          <line x1="120" y1="140" x2="120" y2="245" stroke="#8FA07E" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
         </g>
-        <text x="-170" y="-6" fill="#8FA07E" font-family="IBM Plex Mono" font-size="12" transform="rotate(-90)" text-anchor="middle">H700</text>
+        <!-- Dimension lines -->
+        <g stroke="#8FA07E" stroke-width="1" stroke-dasharray="3 3" opacity="0.5">
+          <line x1="20" y1="140" x2="20" y2="290"/>
+          <line x1="16" y1="140" x2="24" y2="140"/>
+          <line x1="16" y1="290" x2="24" y2="290"/>
+        </g>
+        <text x="10" y="215" fill="#8FA07E" font-family="IBM Plex Mono" font-size="10" transform="rotate(-90 10 215)" text-anchor="middle">INTEGRATED</text>
       </svg>
     </div>
     <div class="p-copy">
-      <div class="eyebrow" data-en="01 — Safety &amp; Access" data-zh="01 — 安全及出入管理">01 — Safety &amp; Access</div>
-      <h2 data-en="Traffic Cones &amp; Belt Barriers" data-zh="反光雪糕筒及伸縮帶欄">Traffic Cones &amp; Belt Barriers</h2>
-      <p data-en="UV-stabilised safety cones and stainless-steel barrier systems engineered for daily use in car parks, lobbies, loading bays and campus environments. Built to withstand demanding conditions with minimal maintenance." data-zh="抗紫外線安全雪糕筒及不鏽鋼柱身欄系統，專為停車場、大堂、卸貨區及校園環境每日使用而設計。堅固耐用，維修保養工作最少。">UV-stabilised safety cones and stainless-steel barrier systems engineered for daily use in car parks, lobbies, loading bays and campus environments. Built to withstand demanding conditions with minimal maintenance.</p>
+      <div class="eyebrow" data-en="01 — Property Management Ecosystem" data-zh="01 — 物業管理生態系統">01 — Property Management Ecosystem</div>
+      <h2 data-en="All-in-One Solutions" data-zh="一站式完整方案">All-in-One Solutions</h2>
+      <p data-en="We supply the complete spectrum of property management needs — safety equipment, building materials, maintenance services, and operational consumables. From traffic control to facility repairs, from signage to deep cleaning, our integrated approach eliminates the need for multiple vendors and streamlines procurement." data-zh="我們供應物業管理的完整範疇——安全用品、建築物料、保養服務及營運消耗品。從交通管制到設施維修、從標誌牌到深層清潔，我們的整合方案消除多個供應商的需要，簡化採購流程。">We supply the complete spectrum of property management needs — safety equipment, building materials, maintenance services, and operational consumables. From traffic control to facility repairs, from signage to deep cleaning, our integrated approach eliminates the need for multiple vendors and streamlines procurement.</p>
       <div class="spec-list">
-        <div class="spec-item"><div class="val" data-en="Cones &amp; Barriers" data-zh="雪糕筒 &amp; 欄柱">Cones &amp; Barriers</div><div class="lbl" data-en="Product Range" data-zh="產品範圍">Product Range</div></div>
-        <div class="spec-item"><div class="val" data-en="Customisable" data-zh="客製化">Customisable</div><div class="lbl" data-en="Colours &amp; Branding" data-zh="顏色及品牌">Colours &amp; Branding</div></div>
-        <div class="spec-item"><div class="val" data-en="Class 1" data-zh="第一級">Class 1</div><div class="lbl" data-en="Reflective Standard" data-zh="反光等級">Reflective Standard</div></div>
-        <div class="spec-item"><div class="val" data-en="−10–60°C" data-zh="−10–60°C">−10–60°C</div><div class="lbl" data-en="Operating Range" data-zh="適用溫度">Operating Range</div></div>
+        <div class="spec-item"><div class="val" data-en="6+ Categories" data-zh="6個以上類別">6+ Categories</div><div class="lbl" data-en="Product Range" data-zh="產品範圍">Product Range</div></div>
+        <div class="spec-item"><div class="val" data-en="Safety to Services" data-zh="從產品到服務">Safety to Services</div><div class="lbl" data-en="Full Scope" data-zh="完整覆蓋">Full Scope</div></div>
+        <div class="spec-item"><div class="val" data-en="Single Point" data-zh="單一接觸">Single Point</div><div class="lbl" data-en="Contact" data-zh="聯絡點">Contact</div></div>
+        <div class="spec-item"><div class="val" data-en="Custom" data-zh="定製">Custom</div><div class="lbl" data-en="Solutions" data-zh="解決方案">Solutions</div></div>
       </div>
     </div>
   </div>
@@ -615,7 +660,7 @@
     <div class="product-card">
       <div class="cat" data-en="SERVICE CATEGORY" data-zh="服務類別">SERVICE CATEGORY</div>
       <h3 data-en="Routine Maintenance" data-zh="日常保養">Routine Maintenance</h3>
-      <p data-en="Preventive servicing of mechanical, electrical and plumbing systems to minimise downtime and extend equipment life." data-zh="機械、電力及水喉系統的預防性保養，以減少停機時間及延長設備壽命。">Preventive servicing of mechanical, electrical and plumbing systems to minimise downtime and extend equipment life.</p>
+      <p data-en="Preventive servicing of mechanical, electrical and plumbing systems to minimise downtime and extend equipment life." data-zh="機械、電力及水喉系統的預防性保��，以減少停機時間及延長設備壽命。">Preventive servicing of mechanical, electrical and plumbing systems to minimise downtime and extend equipment life.</p>
       <ul class="feature-list">
         <li data-en="System inspections" data-zh="系統檢查">System inspections</li>
         <li data-en="Preventive cleaning" data-zh="預防性清潔">Preventive cleaning</li>
